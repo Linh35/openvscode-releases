@@ -3,7 +3,7 @@ FROM ubuntu:18.04
 RUN apt update && \
     apt install -y git wget sudo && \
     apt install libatomic1 && \
-    apt-get install curl && \
+    apt install -y curl && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /home/
@@ -54,7 +54,7 @@ RUN chmod g+rw /home && \
 
 # Install NodeJS
 RUN sudo curl -fsSL https://deb.nodesource.com/setup_16.x | sudo bash -
-RUN sudo apt-get install -y nodejs
+RUN sudo apt install -y nodejs
 
 USER $USERNAME
 
