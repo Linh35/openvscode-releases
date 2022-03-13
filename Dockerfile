@@ -5,6 +5,7 @@ RUN apt update && \
     apt install libatomic1 && \
     rm -rf /var/lib/apt/lists/*
 
+RUN apt-get install curl
 WORKDIR /home/
 
 ARG RELEASE_TAG
