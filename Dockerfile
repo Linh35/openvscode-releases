@@ -3,9 +3,9 @@ FROM ubuntu:18.04
 RUN apt update && \
     apt install -y git wget sudo && \
     apt install libatomic1 && \
+    apt-get install curl \
     rm -rf /var/lib/apt/lists/*
 
-RUN apt-get install curl
 WORKDIR /home/
 
 ARG RELEASE_TAG
